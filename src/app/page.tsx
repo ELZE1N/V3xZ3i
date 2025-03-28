@@ -11,10 +11,6 @@ const WRITE_UPS = [
 ];
 
 export default function Home() {
-  const currentYear = new Date().getFullYear();
-  const currentMonth = new Date().getMonth() + 1;
-  const currentDay = new Date().getDate();
-
   // Calculate days since starting security studies
   const startDate = new Date('2024-02-28');
   const today = new Date();
@@ -35,9 +31,9 @@ export default function Home() {
       </div>
 
       <section className="mb-8">
-        <h1 className="text-xl mb-4">> Welcome</h1>
+        <h1 className="text-xl mb-4">{`> Welcome`}</h1>
         <p className="intro-text">
-          I'm Zein, also known as Z3iTremor. I'm a bug hunter and penetration tester.
+          I&apos;m Zein, also known as Z3iTremor. I&apos;m a bug hunter and penetration tester.
           Here I share my progress, write up my findings, share my methodologies and knowledge.
           And yes, I love watching anime!
         </p>
@@ -53,13 +49,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="ascii-art mb-4" data-text={asciiArt}>
+        <div className="ascii-art mb-4" style={{ whiteSpace: 'pre' }}>
           {asciiArt}
         </div>
       </section>
 
       <section>
-        <h2 className="text-lg mb-4">>> Write-ups</h2>
+        <h2 className="text-lg mb-4">{`>> Write-ups`}</h2>
         <div className="blog-entry-container">
           {WRITE_UPS.length > 0 ? (
             <ul className="list-none space-y-2">
